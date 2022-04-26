@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using HtmlAgilityPack;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Scraping.Models;
 using ScrapySharp.Extensions;
 
@@ -37,11 +34,11 @@ namespace Scraping.Aplication
 
         private void SaveOnDb(List<Registro> registros)
         {
-            foreach (var reg in registros)
-            {
-                Console.WriteLine(reg.Region.ToString() + ", " + reg.Fish + ", " + reg.Location + ", " + reg.Lure + ", " +
-                                  reg.Weight + ", " + reg.Player + ", " + reg.Fecha);
-            }
+            //foreach (var reg in registros)
+            //{
+            //    Console.WriteLine(reg.Region.ToString() + ", " + reg.Fish + ", " + reg.Location + ", " + reg.Lure + ", " +
+            //                      reg.Weight + ", " + reg.Player + ", " + reg.Fecha);
+            //}
 
             _dbContext.BulkInsert(registros, options =>
             {
@@ -136,6 +133,7 @@ namespace Scraping.Aplication
 
             return registros;
         }
+
 
 
     }

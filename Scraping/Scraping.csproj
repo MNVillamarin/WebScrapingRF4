@@ -12,7 +12,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="ScrapySharp" Version="3.0.0" />
-    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="5.13.12" />
+    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="5.13.17" />
   </ItemGroup>
 
   <ItemGroup>
